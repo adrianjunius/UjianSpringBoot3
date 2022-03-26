@@ -8,7 +8,7 @@
 <nav th:fragment="navbar (muke)"
 class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <h1 class="m-0"><i th:text="${titleModel.title1}" class="fa fa-search me-2"></i>
+                    <h1 class="m-0"><i th:text="${titleModel.title1}" class=class="fa fa-bus"></i>
                     <span th:text="${titleModel.title2}" class="fs-2">Master</span></h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
@@ -20,7 +20,7 @@ class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                         <a href="/" class="nav-item nav-link active">Home</a>
                         <a href="about" class="nav-item nav-link">About</a>
                         <a href="service" class="nav-item nav-link">Service</a>
-                        <a href="project" class="nav-item nav-link">Project</a>
+                        <a href="project" class="nav-item nav-link">Penumpang</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu m-0">
@@ -31,8 +31,9 @@ class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                         </div>
                         <a href="contact" class="nav-item nav-link">Contact</a>
                     </div>
-                    <butaton type="button" class="btn text-secondary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
+                    <button type="button" class="btn text-secondary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
                     <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-secondary text-light rounded-pill py-2 px-4 ms-3">Sign In</a>
+                    <a href="daftar" class="btn btn-secondary text-light rounded-pill py-2 px-4 ms-3">Daftar</a>
                 </div>
             </nav>
 </body>

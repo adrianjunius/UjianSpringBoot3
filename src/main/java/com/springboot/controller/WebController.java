@@ -9,7 +9,7 @@ import com.springboot.model.TitleModel;
 @Controller
 public class WebController {
 	
-	TitleModel title = new TitleModel("BEKEN","Trans");
+	TitleModel title = new TitleModel(" BEKEN","Trans");
 	
 	@GetMapping("/")
 	private String index(Model model) {
@@ -35,5 +35,10 @@ public class WebController {
 	private String contact(Model model) {
 		model.addAttribute("titleModel", title);
 		return "contact";
+	}
+	@GetMapping("/daftar")
+		private String daftar(Model model) {
+		model.addAttribute("titleModel", title);
+		return "daftar";
 	}
 }
