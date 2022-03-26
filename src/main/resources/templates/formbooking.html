@@ -30,30 +30,17 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
-</head>
 <body>
-	 <div th:insert="fragment/header :: navbar (muke='index')"/>
-	 <h1 class="text-center">Form Daftar Penumpang</h1>
-						<br>
-						<form method="POST" th:action="@{/blog/input}" th:object="${userModel}" 
-							enctype="multipart/form-data">
-							<div class="mb-3">
-								<label for="exampleFormControlInput1" class="form-label">NIK</label>
-								<input type="text" class="form-control"
-									id="nama" th:field="*{nama}">
-							</div>
-							<div class="mb-3">
-								<label for="exampleFormControlInput1" class="form-label">Nama</label>
-								<input type="text" class="form-control"
-									id="judul" th:field="*{judul}">
-							</div>
-							<div class="mb-3">
-								<label for="exampleFormControlInput1" class="form-label">Nomor Telepon</label>
-								<input type="text" class="form-control"
-									id="deskripsi" th:field="*{deskripsi}">
-							</div>
-							<button type="submit" class="btn btn-success">Insert</button>
-							
-						</form>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Id keberangkatan</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="keberangkatan">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">NIK</label>
+<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="NIK">
+</div>
+<div class="col-12">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
 </body>
 </html>
