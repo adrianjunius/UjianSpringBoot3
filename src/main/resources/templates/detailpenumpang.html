@@ -1,47 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  
-
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
 </head>
-<body>
-
-  <!-- Back to top button -->
-  <div class="back-to-top"></div>
-
-  <h1>Anda sudah terdaftar dengan id berikut ini</h1>
-
-  <main>
-    
-  
-    <div class="page-section">
-      <div class="container">
-      
-        <div class="text-center">
-          
-          <a class="btn btn-primary mb-3" th:href="@{/penumpang/inputcomfort/}">input data</a>
-          <div class="divider mx-auto"></div>
-        </div>
-  
-        <div class="row mt-5 text-center">
-          <div th:each="penumpang : ${listPenumpang}" class="col-lg-4 py-3">
-            <div class="card-blog">
-              <div class="header">
-                <div class="avatar">
-                  
-            
-            <!--  <span class="mai-shapes"></span>-->
-            </div>
-            </div>
-            <h5 th:text="${penumpang.nik}">High Performance</h5>
-            <p th:text="${penumpang.nama}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sit.</p>
-          	<a th:text="${penumpang.telepon}"></a>
-          </div>
-        </div>
-      </div> <!-- .container -->
-    </div> <!-- .page-section -->
-  </main>
-
-  
+<body class="container">
+<h1 class="text-center">Anda telah terdaftar, dengan data berikut:</h1>
+<table class="table table-hover"><tr>
+      <th scope="row">NIK</th>
+      <td th:text="${penumpang.nik}">Mark</td>
+    </tr>
+    <tr>
+      <th scope="row">Nama</th>
+      <td th:text="${penumpang.nama}">Jacob</td>
+    </tr>
+    <tr>
+      <th scope="row">No Telepon</th>
+      <td th:text="${penumpang.telepon}">@twitter</td>
+    </tr>
+	</table>
 </body>
 </html>
