@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -84,31 +85,44 @@ public class WebController {
 		return "penumpang";
 	}
 	
-	@GetMapping("/penumpang/detailpenumpang")
-	private String detailpenumpang(Model model) {
-		model.addAttribute("titleModel", title);
-		model.addAttribute("listPenumpang", penumpangRepo.findAll());
-		return "detailpenumpang";
+	@GetMapping("/penumpang/formpenumpangbaru")
+	private String penumpangDaftar(Model model) {
+		model.addAttribute("penumpangModel", new PenumpangModel());
+		return "formpenumpangbaru";
 	}
 	
-	@GetMapping("/penumpang/formpenumpangbaru")
+//	@PostMapping("/penumpang/formpenumpangbaru/detailpenumpang")
+//	private String savePenumpang(@ModelAttribute PenumpangModel data) {
+//		penumpangRepo.save(data);
+//		return "detailpenumpang";
+//	}
+	
+//	@GetMapping("/penumpang/detailpenumpang")
+//	private String detailpenumpang(Model model) {
+//		model.addAttribute("titleModel", title);
+//		model.addAttribute("listPenumpang", penumpangRepo.findAll());
+//		return "detailpenumpang";
+//	}
+	
+	@GetMapping("/register")
 	private String formpenumpangbaru(Model model) {
 		model.addAttribute("titleModel", title);
 		model.addAttribute("PenumpangModel", new PenumpangModel());
 		return "formpenumpangbaru";
 	}
-
-	@PostMapping("penumpang/formpenumpangbaru")
-	private String saveDetailPenumpang(@ModelAttribute PenumpangModel data) {
-		penumpangRepo.save(data);
+	
+	@GetMapping("/formpenumpangbaru/detailpenumpang")
+	private String detailPenumpang(Model model) {
+		model.addAttribute("penumpangModel", new PenumpangModel());
 		return "redirect:/detailpenumpang";
 	}
-	@GetMapping("/detailpenumpang")
-	private String detailpenumpangshow(Model model) {
-		model.addAttribute("titleModel", title);
-		model.addAttribute("listPenumpang", penumpangRepo.findAll());
-		return "detailpenumpang";
+	
+	@PostMapping("/formpenumpangbaru/detailpenumpang")
+	private String tambahPenumpang(@ModelAttribute PenumpangModel penumpang) {
+		penumpangRepo.save(penumpang);
+		return "redirect:/detailpenumpang";
 	}
+<<<<<<< HEAD
 //	@GetMapping("/penumpang/formpenumpang/detailpenumpang")
 //    public PenumpangModel tampilFormDetail(@RequestParam(required = false, value = "id") PenumpangModel penumpang) {
 //        if (penumpang == null) {
@@ -140,6 +154,32 @@ public class WebController {
 	}
 	
 
+=======
+	
+	@GetMapping("/formlogin")
+	private String masuk(Model model) {
+		model.addAttribute("PenumpangModel", new PenumpangModel());
+		return "formlogin";
+	}
+	
+	@GetMapping("/formlogin/detailpenumpang")
+	private String loginNik2(@PathVariable(value="nik")String nik) {
+		if(penumpangRepo.findByNik(nik).isEmpty()) {
+			return "redirect:/kenihilan";
+		}
+		return "redirect:/detailpenumpang";
+		
+	}
+	
+//	@PostMapping("/formlogin")
+//	private S
+	
+	@GetMapping("/detailpenumpang")
+	private String detailLogin(@PathVariable(value="nik")String nik) {
+		penumpangRepo.findByNik(nik);
+		return "redirect:/detailpenumpang";
+	}
+>>>>>>> 97bb5caac0ef407e3f3b567e5b8cd367024bfe8e
 	
 	//@GetMapping("/cariKeberangkatan")
 //	private List<BookingCustomeGetNameModel> getAllDataTerminalAwalTanggal(

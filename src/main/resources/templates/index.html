@@ -45,7 +45,7 @@
 
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
-            <div th:insert="fragment/header :: navbar (muke='index')"/>
+            <div th:insert="fragment/header :: navbar (muke='home')"></div>
 
             <div class="container-xxl py-5 bg-primary hero-header mb-5">
                 <div class="container my-5 py-5 px-lg-5">
@@ -53,8 +53,9 @@
                         <div class="col-lg-6 text-center text-lg-start">
                             <h1 class="text-white mb-4 animated zoomIn">BEKEN Trans selalu berinovasi untuk mengembangkan produk dan pelayanannya,</h1>
                             <p class="text-white pb-3 animated zoomIn">itu semua dilakukan sejalan dengan visi BEKEN Trans untuk menjadi moda transportasi darat yang unggul dalam kualitas dan pelayanan di Indonesia</p>
-                            <a href="formbooking" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Booking</a>
-                            <a href="" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
+                            <a href="/formbooking" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Booking</a>
+                            <a href="/carikeberangkatan" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Search Booking</a>
+                            <a href="/formcancel" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Cancel Booking</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-start">
                             <img class="img-fluid" src="img/blue-bus.png" alt="">

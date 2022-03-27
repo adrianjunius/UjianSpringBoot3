@@ -2,12 +2,20 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<<<<<<< HEAD
 <title>Beken Trans | New experiece of driving with bus.</title>
 </head>
 <body class="container">
 <div th:insert="fragment/header :: navbar (muke='index')"/>
 <h1 class="text-center">Anda telah terdaftar, dengan data berikut:</h1>
 <table th:each="penumpang : ${listPenumpang}" class="table table-hover"><tr>
+=======
+<title>Insert title here</title>
+</head>
+<body class="container">
+<h1 class="text-center">Anda telah terdaftar, dengan data berikut:</h1>
+<table class="table table-hover"><tr>
+>>>>>>> 97bb5caac0ef407e3f3b567e5b8cd367024bfe8e
       <th scope="row">NIK</th>
       <td th:text="${penumpang.nik}">Mark</td>
     </tr>
@@ -17,7 +25,11 @@
     </tr>
     <tr>
       <th scope="row">No Telepon</th>
+<<<<<<< HEAD
 <td th:text="${penumpang.telepon}">@twitter</td>
+=======
+      <td th:text="${penumpang.telepon}">@twitter</td>
+>>>>>>> 97bb5caac0ef407e3f3b567e5b8cd367024bfe8e
     </tr>
 	</table>
 </body>
