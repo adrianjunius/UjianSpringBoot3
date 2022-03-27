@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body class="container">
+<h1 class="text-center">Keberangkatan yang Tersedia</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">deskripsi</th>
+      <th scope="col">waktu</th>
+      <th scope="col">perusahaan</th>
+      <th scope="col">kelas</th>
+      <th scope="col">harga</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td th:text="${keberangkatan.id}">Mark</td>
+      <td th:text="${jurusan.deskripsi}">Otto</td>
+      <td th:text="${keberangkatan.tanggal}">@mdo</td>
+      <td th:text="${perusahaan.namaPerusahaan}">@mdo</td>
+      <td th:text="${keberangkatan.kelas}">@mdo</td>
+      <td th:text="${keberangkatan.harga}">@mdo</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
